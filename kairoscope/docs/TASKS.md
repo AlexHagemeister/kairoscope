@@ -4,6 +4,7 @@
 - Start each session with `docs/AGENTS.md` → `docs/PRD.md` → `docs/SDD.md` (Module Quick Reference + relevant sections).
 - Update this file at session start/end with progress, blockers, and next actions.
 - Keep tasks scoped to the context packs in SDD Section 11; note cross-cutting work explicitly.
+- Commit and push after each task or checkpoint once functionality is implemented and verified.
 
 ## [ ] Phase 1 / Milestone A — Timeline Scaffolding (Success: Tasks A1–A6 deliver a static timeline shell reachable from RootView.)
 - [x] A1 Create `AppConfiguration` + feature flag plumbing (`isAuthEnabled`, API base URL placeholder). Success: Toggling `isAuthEnabled` in configuration switches between auth gate and timeline in a preview-based smoke test.
@@ -47,12 +48,12 @@
 - Profile Canvas performance once animation loop exists (SDD Section 12.3). Success: Performance report captured with mitigation plan if frame rate drops below target.
 
 ## Checkpoints & Review Gates
-- **Checkpoint A (after completing Tasks A1–A3):** ✅ Human review complete on 2025-09-17; proceed to A4–A6 with auth flag reset to false.
-- **Checkpoint B (after completing Tasks B1–B3):** Demonstrate gesture handling and timeline animation; confirm performance metrics expectations before continuing with tests/instrumentation.
-- **Checkpoint C (after completing Tasks C1–C3):** Review authentication integration end-to-end, ensuring feature flag behavior and mock service switching are correct prior to persisting sessions/tests.
-- **Checkpoint D (after completing Tasks D1–D3):** Validate entry creation UX and local persistence with human feedback before rendering entries and expanding test coverage.
-- **Checkpoint E (after completing Tasks E1–E3):** Confirm backend contract alignment and media sync flow with human reviewer prior to background sync/telemetry work.
-- **Checkpoint R (end of any session):** Summarize changes, test status, and open questions; wait for human acknowledgment before starting new milestones.
+- **Checkpoint A (after completing Tasks A1–A3):** ✅ Human review complete on 2025-09-17; commit/push before proceeding to A4–A6 with auth flag reset to false.
+- **Checkpoint B (after completing Tasks B1–B3):** Demonstrate gesture handling and timeline animation, commit the verified work, then continue with tests/instrumentation.
+- **Checkpoint C (after completing Tasks C1–C3):** Review authentication integration end-to-end, ensure feature flag behavior and mock service switching are correct, and commit prior to persisting sessions/tests.
+- **Checkpoint D (after completing Tasks D1–D3):** Validate entry creation UX and local persistence with human feedback, then commit before rendering entries and expanding test coverage.
+- **Checkpoint E (after completing Tasks E1–E3):** Confirm backend contract alignment and media sync flow with human reviewer, commit the verified implementation, then continue to background sync/telemetry work.
+- **Checkpoint R (end of any session):** Summarize changes, test status, open questions, and ensure work is committed/pushed before starting new milestones.
 
 ## Session Log
 - **2025-09-18 (Session 4 Update):** Refined timeline visuals (edge-to-edge axis, centered layout, labeled ticks) and removed main-actor init warnings by making `TimelineViewModel` convenience-based. Visual polish pending animation work in Milestone B.
